@@ -1,0 +1,151 @@
+{
+  "folderStructure": {
+    "resources": "./resources/",
+    "data": "./data/",
+    "packets": "./packets/",
+    "scripts": "./resources/Scripts/",
+    "plugins": "./plugins/"
+  },
+  "databaseInfo": {
+    "server": {
+      "connectionUri": "mongodb://localhost:27017",
+      "collection": "grasscutter"
+    },
+    "game": {
+      "connectionUri": "mongodb://localhost:27017",
+      "collection": "grasscutter"
+    }
+  },
+  "language": {
+    "language": "zh_CN",
+    "fallback": "en_US",
+    "document": "EN"
+  },
+  "account": {
+    "autoCreate": false,
+    "defaultPermissions": [],
+    "maxPlayer": -1
+  },
+  "server": {
+    "debugLevel": "NONE",
+    "runMode": "HYBRID",
+    "http": {
+      "bindAddress": "0.0.0.0",
+      "accessAddress": "192.168.1.10",
+      "bindPort": 443,
+      "accessPort": 0,
+      "encryption": {
+        "useEncryption": true,
+        "useInRouting": true,
+        "keystore": "./keystore.p12",
+        "keystorePassword": "123456"
+      },
+      "policies": {
+        "cors": {
+          "enabled": false,
+          "allowedOrigins": [
+            "*"
+          ]
+        }
+      },
+      "files": {
+        "indexFile": "./index.html",
+        "errorFile": "./404.html"
+      }
+    },
+    "game": {
+      "bindAddress": "0.0.0.0",
+      "accessAddress": "192.168.1.10",
+      "bindPort": 22102,
+      "accessPort": 0,
+      "loadEntitiesForPlayerRange": 100,
+      "enableScriptInBigWorld": true,
+      "enableConsole": true,
+      "gameOptions": {
+        "inventoryLimits": {
+          "weapons": 10000,
+          "relics": 2000,
+          "materials": 2000,
+          "furniture": 2000,
+          "all": 30000
+        },
+        "avatarLimits": {
+          "singlePlayerTeam": 4,
+          "multiplayerTeam": 4
+        },
+        "sceneEntityLimit": 1000,
+        "watchGachaConfig": false,
+        "enableShopItems": true,
+        "staminaUsage": true,
+        "energyUsage": false,
+        "resinOptions": {
+          "resinUsage": false,
+          "cap": 160,
+          "rechargeTime": 480
+        },
+        "rates": {
+          "adventureExp": 1.0,
+          "mora": 1.0,
+          "leyLines": 1.0
+        }
+      },
+      "joinOptions": {
+        "welcomeEmotes": [
+          2007,
+          1002,
+          4010
+        ],
+        "welcomeMessage": "Welcome to rwx9032's Pritive Server.",
+        "welcomeMail": {
+          "title": "Welcome to rwx9032PS!",
+          "content": "Hi there!\r\n Welcome to rwx9032PS.Here are Your Rewards.",
+          "sender": "rwx9032",
+          "items": [
+            {
+              "itemId": 13509,
+              "itemCount": 1,
+              "itemLevel": 1
+            },
+            {
+              "itemId": 201,
+              "itemCount": 1600,
+              "itemLevel": 1
+            }
+          ]
+        }
+      },
+      "serverAccount": {
+        "avatarId": 10000060,
+        "nameCardId": 210002,
+        "adventureRank": 666,
+        "worldLevel": 10,
+        "nickName": "rwx9032bot",
+        "signature": "Welcome to rwx9032PS!"
+      }
+    },
+    "dispatch": {
+      "regions": [
+	   {
+	    "Name":"LoaclNetWork_dev",
+		"Title":"LoaclNetWork_dev",
+		"Ip":"192.168.0.19",
+		"Port": 22102
+	   },
+	   	{
+	    "Name":"LocalNetWork_stable",
+		"Title":"LocalNetWork_stable",
+		"Ip":"192.168.0.19",
+		"Port": 22101
+	   },
+	   {
+	    "Name":"LocalHost",
+		"Title":"LocalHost",
+		"Ip":"127.0.0.1",
+		"Port": 22102
+	   }
+	  ],
+      "defaultName": "Grasscutter2.7"
+    }
+  },
+  "version": 3
+}
