@@ -2,7 +2,7 @@
 
 更新了gc核心
 
-#sepcial thanks
+# sepcial thanks
 grasscutters
 
 TomyJan
